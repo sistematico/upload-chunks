@@ -1,0 +1,20 @@
+{
+  "name": "upload-chunks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx http-server --cors public",
+    "api:dev": "npx nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "pino": "^8.18.0",
+    "pino-pretty": "^10.3.1",
+    "socket.io": "^4.7.4"
+  }
+}
