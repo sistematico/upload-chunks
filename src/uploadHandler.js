@@ -1,4 +1,4 @@
-const Busboy = require("busboy");
+const busboy = require("busboy");
 const { logger, pipelineAsync } = require("./util");
 const { join } = require("path");
 const { createWriteStream } = require("fs");
@@ -14,10 +14,10 @@ class UploadHandler {
   }
 
   registerEvents(headers, onFinish) {
-    const busboy = new Busboy({ headers });
-    busboy.on("file", this.#onFile.bind(this));
-    busboy.on("finish", onFinish);
-    return busboy;
+    const bb = busboy({ headers });
+    bb.on("file", this.#onFile.bind(this));
+    bb.on("finish", onFinish);
+    return bb;
   }
 
   #handleFileBytes(filename) {
@@ -33,7 +33,7 @@ class UploadHandler {
   }
 
   async #onFile(fieldname, file, filename) {
-    const saveFileTo = join(__dirname, "../", "downloads", filename);
+    const saveFileTo = join(__dirname, "../", "public", "downloads", filename.filename);
     logger.info("Uploading: " + saveFileTo);
 
     await pipelineAsync(

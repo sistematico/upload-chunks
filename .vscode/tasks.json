@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "dev",
+			"problemMatcher": [],
+			"label": "npm: dev",
+			"detail": "npx http-server --cors public"
+		},
+		{
+			"type": "npm",
+			"script": "api:dev",
+			"problemMatcher": [],
+			"label": "npm: api:dev",
+			"detail": "npx nodemon src/server.js"
+		}
+	]
+}

@@ -14,10 +14,11 @@ const handler = function (request, response) {
 }
 
 const server = http.createServer(handler)
+
 const io = socketIo(server, {
     cors: {
-        origin: "*",
-        credentials: false
+        origin: '*',
+        method: ['OPTIONS', 'POST']
     }
 })
 
