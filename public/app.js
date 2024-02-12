@@ -34,14 +34,6 @@ const showSize = () => {
 
   bytesAmount = size;
   updateStatus(size);
-
-  // const interval = setInterval(() => {
-  //     console.count()
-  //     const result = bytesAmount - 5e6
-  //     bytesAmount = result < 0 ? 0 : result
-  //     updateStatus(bytesAmount)
-  //     if(bytesAmount === 0 ) clearInterval(interval)
-  // }, 50)
 };
 
 const updateMessage = (message) => {
@@ -87,7 +79,6 @@ const submit = (event) => {
   for (let index = 0; index < fileInputElement.files.length; index++) {
     formData.append('file', fileInputElement.files[index])
   }
-  //const uploadURL = socketIoClientId ? API_URL + `?socketId=${socketIoClientId}` : API_URL
 
   fetch(form.action, {
     method: 'POST',
