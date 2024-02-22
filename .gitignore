@@ -3,3 +3,4 @@ public/uploads/*
 !public/uploads/.gitkeep
 *.mp4
 *.mp3
+*old*
