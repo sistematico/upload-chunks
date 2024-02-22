@@ -2,13 +2,22 @@
   "name": "upload-chunks",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "dev": "bun run --hot src/server.ts"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/busboy": "^1.5.3",
+    "@types/fs-extra": "^11.0.4"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@hono/node-server": "^1.7.0",
+    "busboy": "^1.6.0",
+    "consola": "^3.2.3",
+    "fs-extra": "^11.2.0",
     "hono": "^4.0.2"
   }
 }

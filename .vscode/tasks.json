@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "bun: dev",
+			"detail": "bun run dev",
+			"type": "bun",
+			"script": "dev",
+			"problemMatcher": [],
+			"runOptions": {
+				"runOn": "folderOpen"
+			},
+			"presentation": {
+				"reveal": "never",
+				"panel": "shared"
+			}
+		}
+	]
+}

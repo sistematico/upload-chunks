@@ -1,4 +1,4 @@
-# upload-chunks
+# Upload Chunks
 
 To install dependencies:
 
