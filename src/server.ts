@@ -11,11 +11,10 @@ app.use('/*', serveStatic({ root: '/public' }))
 
 app.post('/upload', async (c) => {
   const body = await c.req.parseBody() // parse
-  const filename = c.req.header('filename') // parse
   const file = body['file']
-
+  const filename = c.req.header('filename') // parse
   const uploadDir = UPLOAD_DIR + '/' + filename
-  
+    
   if (!filename) return c.text('No filename was passed.') // Check if anything was passed as 'file'
   if (!file) return c.text('No file was passed in.') // Check if anything was passed as 'file'
   if (!(file instanceof File)) return c.text('That is not a file.') // Check if its a file
